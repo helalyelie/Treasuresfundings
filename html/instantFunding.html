@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- bootstrap section -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header id="#top">
+        <div class="header-left">
+            <img src="../images/tfLogo.png" alt="Treasures Funding Logo">
+            <h1>Treasures Funding</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="instantFunding.html">Instant Funding</a>
+                    <ul class="submenu">
+                        <li><a href="#sectionFundingProcess">Funding Process</a></li>
+                        <li><a href="#sectionPrices">Prices</a></li>
+                    </ul>
+                </li>
+                <li><a href="affiliateProgram.html">Affiliate Program</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home-content">
+            <h2> <strong>Funding Process</strong> </h2>
+        </div>
+        <br>
+        <div id="sectionFundingProcess">
+            <div class="container2 group">
+                <div class="grid-1-5">
+                    <h3><b>Step 1</b></h3>
+                    <br>
+                    <p>Send an email to "deposit@treasuresfunding.com" including a picture of ID with proof of payment.
+                        WISH,OMT,Crypto(TRC20)</p>
+                </div>
+                <div class="grid-1-5">
+                    <h3><b>Step 2</b></h3>
+                    <br>
+                    <p>You will receive an email including your account credentials.</p>
+
+                </div>
+                <div class="grid-1-5">
+                    <h3><b>Step 3</b></h3>
+                    <br>
+                    <p>Withdrawal Process: Send an email to "withdraw@treasuresfunding.com" mentioning your account
+                        number ,
+                        the amount that you wish to withdraw ,and payment method desired.</p>
+                </div>
+                <div class="grid-1-5">
+                    <h3><b>Step 4 </b></h3>
+                    <br>
+                    <p>You will receive an email from "withdraw@treasuresfunding.com" with a picture of funds received
+                        with
+                        the applied payment method.</p>
+
+                </div>
+            </div>
+        </div>
+        <div id="sectionPrices">
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <button class="rebutton2" onclick="changeText('Button One')">1,000$</button>
+                        <button class="rebutton2" onclick="changeText('Button Two')">3,000$</button>
+                        <button class="rebutton2" onclick="changeText('Button Three')">5,000$</button>
+                        <button class="rebutton2" onclick="changeText('Button Four')">10,000$</button>
+                        <button class="rebutton2" onclick="changeText('Button Five')">25,000$</button>
+                        <button class="rebutton2" onclick="changeText('Button Six')">50,000$</button>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Daily Drawdown
+                    </td>
+                    <td id="row1col2">No Daily Drawdown</td>
+                </tr>
+                <tr>
+                    <td>Maximum Drawdown</td>
+                    <td id="row2col2">10%</td>
+                </tr>
+                <tr>
+                    <td>Minimum trading days</td>
+                    <td id="row3col2">No Limit</td>
+                </tr>
+                <tr>
+                    <td>Profit split</td>
+                    <td id="row4col2">70/30</td>
+                </tr>
+                <tr>
+                    <td>leverage <div class="dropdown">
+                            <span class="dropdown-icon">▼</span>
+                            <div class="dropdown-content">
+                                <p id="hoverss"></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td id="row5col2">1:50</td>
+                </tr>
+                <tr>
+                    <td>Deposit</td>
+                    <td id="row6col2"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="home-content">
+            <br>
+            <br>
+            <p class="bold-text">"Keep in mind that you do not have to wait a thirty day peiord or even two weeks to
+                withdraw your money. You have full access to your funds and can withdraw any amount. Also you are free
+                to grow your account as much as you want with no limits to your trading style."</p>
+        </div>
+
+    </main>
+
+
+
+
+    <script>
+        // Add a class to the table to trigger the animation on load
+        window.addEventListener('load', function () {
+            const table = document.querySelector('table');
+            table.classList.add('show');
+        });
+    </script>
+
+    <script>
+
+        function changeText(buttonName) {
+            var tableCell = document.getElementById("row6col2");
+            var hoversss = document.getElementById("hoverss")
+
+            if (buttonName === 'Button One') {
+                tableCell.innerHTML = "100$";
+                hoversss.innerHTML = "Maximum lot size 0.50 (Currencies) 0.20 (commodities,indicies) (You can increase your lot size while growing your account )";
+            } else if (buttonName === 'Button Two') {
+                tableCell.innerHTML = "300$";
+                hoversss.innerHTML = "Maximum lot size 1.5 (Currencies)0.6(commodities,indicies) (You can increase your lot size while growing your account )";
+            } else if (buttonName === 'Button Three') {
+                tableCell.innerHTML = "500$";
+                hoversss.innerHTML = "Maximum lot size 2.5 (Currencies)1(commodities,indicies) (You can increase your lot size while growing your account )";
+            } else if (buttonName === 'Button Four') {
+                tableCell.innerHTML = "1000$";
+                hoversss.innerHTML = "Maximum lot size 5(Currencies) 2 (commodities,indicies) (You can increase your lot size while growing your account )";
+            } else if (buttonName === 'Button Five') {
+                tableCell.innerHTML = "Coming Soon!";
+                hoversss.innerHTML = ""
+            } else if (buttonName === 'Button Six') {
+                tableCell.innerHTML = "Coming Soon!";
+                hoversss.innerHTML = ""
+            }
+        }
+
+    </script>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                target="_blank"><span class="blue-text"></span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async>
+                {
+                    "symbols"[
+                        {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500"
+                        },
+                        {
+                            "proName": "FOREXCOM:NSXUSD",
+                            "title": "US 100"
+                        },
+                        {
+                            "proName": "FX_IDC:EURUSD",
+                            "title": "EUR/USD"
+                        },
+                        {
+                            "proName": "FOREXCOM:GBPUSD",
+                            "title": "GBP/USD"
+                        },
+                        {
+                            "proName": "FOREXCOM:GBPJPY",
+                            "title": "GBP/JPY"
+                        }
+                    ],
+                        "showSymbolLogo" = true,
+                        "colorTheme" = "light",
+                        "isTransparent" = false,
+                        "displayMode" = "adaptive",
+                        "locale" = "en"
+                }
+            </script>
+    </div>
+
+
+
+    <!-- Footer section -->
+    <footer>
+        <br>
+        <br>
+        <div class="footer-logo">
+            <img src="../images/tfLogo.png" alt="Company Logo">
+        </div>
+        <div class="footer-links">
+            <a href="mailto:support@treasuresfunding.com">Support</a>
+            <a href="mailto:deposit@treasuresfunding.com">Deposit</a>
+            <a href="mailto:withdraw@treasuresfunding.com">Withdraw</a>
+            <a href="mailto:affiliate@treasuresfunding.com">Affiliate</a>
+            <a href="mailto:inquiry@treasuresfunding.com">Inquiry</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61551070382645 " target="_blank">
+                <img src="../images/facebook_social.svg" alt="">
+                <i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/treasurefunding?s=21" target="_blank">
+                <img src="../images/x.svg" alt="">
+                <i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/treasuresfunding_" target="_blank">
+                <img src="../images/instagram_social.svg" alt="">
+                <i class="fab fa-instagram"></i></a>
+            <a href="https://discord.gg/WZ6BQ96g" target="_blank">
+                <img src="../images/discord_logo.svg" alt="">
+                <i class="fab fa-discord"></i></a>
+            <a href="https://www.tiktok.com/@treasuresfunding" target="_blank">
+                <img src="../images/tiktok-round.svg" alt="">
+                <i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
